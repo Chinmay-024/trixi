@@ -9,7 +9,9 @@ export default function Register() {
 	const [password, setPassword] = useState("");
 	const [username, setUsername] = useState("");
 	const history = useHistory();
-	// axios = axios.create({ baseURL: process.env.API_URL });
+	const axiosInstance = axios.create({
+        baseURL: process.env.REACT_APP_API_URL,
+    });
 
 	const emailRef = useRef();
 	const passwordRef = useRef();
@@ -23,7 +25,7 @@ export default function Register() {
 		setPassword(passwordRef.current.value);
 		setUsername(usernameRef.current.value);
 		try {
-			await axios.post("http://localhost:8800/api/auth/register", {
+			await axiosInstance.post("/auth/register", {
 				email,
 				username,
 				password,

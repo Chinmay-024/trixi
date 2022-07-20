@@ -3,14 +3,18 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+const axiosInstance = axios.create({
+	baseURL: process.env.REACT_APP_API_URL,
+});
+
 export default function WidgetSm() {
 	const [newUsers, setNewUsers] = useState([]);
 
 	useEffect(() => {
 		const getNewUsers = async () => {
 			try {
-				const res = await axios.get(
-					"http://localhost:8800/api/users?new=true",
+				const res = await axiosInstance.get(
+					"/users?new=true",
 					{
 						headers: {
 							token:
