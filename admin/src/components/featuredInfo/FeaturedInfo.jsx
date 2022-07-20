@@ -12,7 +12,7 @@ export default function FeaturedInfo() {
 						-11.4 <ArrowDownwardIcon className="featuredIcon negative" />
 					</span>
 				</div>
-				<span className="featuredSub">Compared to last month</span>
+				<span className="featuredSub">App is not being used for billing. So only constant values displayed</span>
 			</div>
 			<div className="featuredItem">
 				<span className="featuredTitle">Sales</span>
@@ -22,7 +22,7 @@ export default function FeaturedInfo() {
 						-1.4 <ArrowDownwardIcon className="featuredIcon negative" />
 					</span>
 				</div>
-				<span className="featuredSub">Compared to last month</span>
+				<span className="featuredSub">App is not being used for billing. So only constant values displayed</span>
 			</div>
 			<div className="featuredItem">
 				<span className="featuredTitle">Cost</span>
@@ -32,7 +32,7 @@ export default function FeaturedInfo() {
 						+2.4 <ArrowUpwardIcon className="featuredIcon" />
 					</span>
 				</div>
-				<span className="featuredSub">Compared to last month</span>
+				<span className="featuredSub">App is not being used for billing. So only constant values displayed</span>
 			</div>
 		</div>
 	);

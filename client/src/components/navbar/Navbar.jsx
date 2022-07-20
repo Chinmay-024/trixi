@@ -1,6 +1,6 @@
-import SearchIcon from "@mui/icons-material/Search";
+// import SearchIcon from "@mui/icons-material/Search";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+// import NotificationsIcon from "@mui/icons-material/Notifications";
 
 import { useContext, useState } from "react";
 import "./navbar.scss";
@@ -10,7 +10,7 @@ import { logout } from "../../authContext/AuthActions";
 
 const Navbar = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
-	const { dispatch } = useContext(AuthContext);
+	const { user,dispatch } = useContext(AuthContext);
 
 	window.onscroll = () => {
 		setIsScrolled(window.pageYOffset === 0 ? false : true);
@@ -34,9 +34,9 @@ const Navbar = () => {
 					<span>My List</span> */}
 				</div>
 				<div className="right">
-					<SearchIcon className="icon" />
-					<span>KID</span>
-					<NotificationsIcon className="icon" />
+					{/* <SearchIcon className="icon" /> */}
+					<span>{user.email}</span>
+					{/* <NotificationsIcon className="icon" /> */}
 					<img
 						src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png"
 						alt=""
@@ -44,7 +44,7 @@ const Navbar = () => {
 					<div className="profile">
 						<ArrowDropDownIcon className="icon" />
 						<div className="options">
-							<span>Settings</span>
+							{/* <span>Settings</span> */}
 							<span onClick={() => dispatch(logout())}>Logout</span>
 						</div>
 					</div>

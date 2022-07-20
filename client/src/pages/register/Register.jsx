@@ -35,8 +35,12 @@ export default function Register() {
 		<div className="register">
 			<div className="top">
 				<div className="wrapper">
-					<span className="logo">TRIXI</span>
-
+					<span className="logo">TRIXI</span>					
+					<button className="loginButton">
+						<Link to={{ pathname: "https://google.com" }} target="_blank"  className="link">
+							Admin
+						</Link>
+					</button>
 					<button className="loginButton">
 						<Link to="/login" className="link">
 							Sign In

@@ -5,6 +5,9 @@ import { Publish } from "@material-ui/icons";
 export default function Movie() {
 	const location = useLocation();
 	const movie = location.movie;
+	console.log('Hi');
+	console.log(movie,location)
+	
 	return (
 		<div className="product">
 			<div className="productTitleContainer">
@@ -58,7 +61,7 @@ export default function Movie() {
 					<div className="productFormRight">
 						<div className="productUpload">
 							<img src={movie.img} alt="" className="productUploadImg" />
-							<label for="file">
+							<label htmlFor="file">
 								<Publish />
 							</label>
 							<input type="file" id="file" style={{ display: "none" }} />

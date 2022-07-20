@@ -3,10 +3,10 @@ import Topbar from "./components/topbar/Topbar";
 import "./app.css";
 import Home from "./pages/home/Home";
 import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Redirect,
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect,
 } from "react-router-dom";
 import UserList from "./pages/userList/UserList";
 import User from "./pages/user/User";
@@ -18,61 +18,61 @@ import ListList from "./pages/listList/ListList";
 import List from "./pages/list/List";
 import NewList from "./pages/newList/NewList";
 import MovieList from "./pages/movieList/MovieList";
-import { Movie } from "@material-ui/icons";
+import Movie from "./pages/movie/Movie";
 import NewMovie from "./pages/newMovie/NewMovie";
 
 function App() {
-	const { user } = useContext(AuthContext);
-	console.log(user === null);
-	return (
-		<Router>
-			<Switch>
-				<Route path="/login">
-					{user === null ? <Login /> : <Redirect to="/" />}
-				</Route>
-				{user === null ? (
-					<Redirect to="/login" />
-				) : (
-					<>
-						<Topbar />
-						<div className="container">
-							<Sidebar />
-							<Route exact path="/">
-								<Home />
-							</Route>
-							<Route path="/users">
-								<UserList />
-							</Route>
-							<Route path="/user/:userId">
-								<User />
-							</Route>
-							<Route path="/newUser">
-								<NewUser />
-							</Route>
-							<Route path="/movies">
-								<MovieList />
-							</Route>
-							<Route path="/movie/:movieId">
-								<Movie />
-							</Route>
-							<Route path="/newMovie">
-								<NewMovie />
-							</Route>
-							<Route path="/lists">
-								<ListList />
-							</Route>
-							<Route path="/list/:listId">
-								<List />
-							</Route>
-							<Route path="/newlist">
-								<NewList />
-							</Route>
-						</div>
-					</>
-				)}
-			</Switch>
-		</Router>
-	);
+    const { user } = useContext(AuthContext);
+    console.log(user === null);
+    return (
+        <Router>
+            <Switch>
+                <Route path='/login'>
+                    {user === null ? <Login /> : <Redirect to='/' />}
+                </Route>
+                {user === null ? (
+                    <Redirect to='/login' />
+                ) : (
+                    <>
+                        <Topbar />
+                        <div className='container'>
+                            <Sidebar />
+                            <Route exact path='/'>
+                                <Home />
+                            </Route>
+                            <Route path='/users'>
+                                <UserList />
+                            </Route>
+                            <Route path='/user/:userId'>
+                                <User />
+                            </Route>
+                            <Route path='/newUser'>
+                                <NewUser />
+                            </Route>
+                            <Route path='/movies'>
+                                <MovieList />
+                            </Route>
+                            <Route path='/movie/:movieId'>
+                                <Movie />
+                            </Route>
+                            <Route path='/newMovie'>
+                                <NewMovie />
+                            </Route>
+                            <Route path='/lists'>
+                                <ListList />
+                            </Route>
+                            <Route path='/list/:listId'>
+                                <List />
+                            </Route>
+                            <Route path='/newlist'>
+                                <NewList />
+                            </Route>
+                        </div>
+                    </>
+                )}
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
