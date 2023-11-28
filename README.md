@@ -35,7 +35,13 @@ Start by installing the dependencies in client, admin and api:
 - DB schema is designed in MongoDB.
 - The backend is built on Express framework of NodeJS.
 
+## Screenshots
 
+![Home](https://drive.google.com/uc?export=view&id=1WF4hN82lGVu6d9CgWAT663RX5Obu_jr_)
+
+![Admin](https://drive.google.com/uc?export=view&id=1MAlWyD4j5fHKYkR9KN5p51dW8lcsKvyb)
+
+![Admin2](https://drive.google.com/uc?export=view&id=1XY6lFvxUYkPHk35ZVx3vApG3SmoYALuW)
 
 
 
